@@ -14,7 +14,7 @@ const HeroPic = () => {
       className="h-full flex items-center justify-center overflow-hidden"
     >
       <img
-        rc={`${process.env.PUBLIC_URL}/images/frontend.png`}
+        src="./src/assets/images/frontend.png"
         alt="Hero pic"
         className="max-h-[450px] w-auto"
       />
