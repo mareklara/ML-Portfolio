@@ -5,7 +5,7 @@ const AboutMeImage = () => {
     <div className="h-[500px] w-[300px] relative">
       <div className="h-[500px] w-[300px] rounded-[50px] absolute overflow-hidden">
         <img
-          src="../../public/images/download.gif"
+          src="/images/download.gif"
           alt="about img"
           className="h-full w-auto object-cover"
         />
