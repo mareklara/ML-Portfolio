@@ -23,11 +23,11 @@
   --boxShadow-cyanShadow: 0px 0px 20px 0px rgba(94, 206, 220, 0.5);
   --boxShadow-cyanMediumShadow: 10px 10px 200px 150px rgba(94, 206, 220, 0.5);
   --boxShadow-orangeMediumShadow: 10px 10px 200px 150px rgba(240, 169, 79, 0.5);
-  --sm-small: 350px;
-  --md-medium: 768px;
-  --lg-large: 1024px;
-  --xl-extraLarge: 1280px;
-  --2xl-extraExtraLarge: 1536px;
+  /* --sm-small: 350px; */
+  /* --md-medium: 768px; */
+  /* --lg-large: 1024px; */
+  /* --xl-extraLarge: 1280px; */
+  /* --2xl-extraExtraLarge: 1536px; */
 }
 
 body {

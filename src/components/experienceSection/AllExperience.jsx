@@ -47,26 +47,59 @@ const experiences = [
   },
 ];
 
+// const AllExperience = () => {
+//   return (
+//     <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+//       {experiences.map((experience, index) => {
+//         return (
+//           <>
+//             <SingleExperience key={index} experience={experience} />
+//             {index < 3 ? (
+//               <motion.div
+//                 variants={fadeIn("right", 0.2)}
+//                 initial={"hidden"}
+//                 whileInView="show"
+//                 viewport={{ once: false, amount: 0 }}
+//               >
+//                 <FaArrowRight className="text-6xl text-orange hidden lg:block" />
+//               </motion.div>
+//             ) : (
+//               ""
+//             )}
+//           </>
+//         );
+//       })}
+//     </div>
+// );
+// };
+
 const AllExperience = () => {
+  const isFlexWrap = experiences.length > 4; // Enable flex-wrap only if there are more than 4 items
+
   return (
-    <div className="flex md:flex-row sm:flex-col items-center justify-between">
+    <div
+      className={`flex flex-col md:flex-row items-center justify-center gap-6 ${
+        isFlexWrap ? "flex-wrap" : ""
+      }`}
+    >
       {experiences.map((experience, index) => {
         return (
-          <>
-            <SingleExperience key={index} experience={experience} />
-            {index < 3 ? (
+          <React.Fragment key={index}>
+            <div className="w-full md:w-1/4 flex-shrink-0">
+              <SingleExperience experience={experience} />
+            </div>
+            {index < experiences.length - 1 ? (
               <motion.div
                 variants={fadeIn("right", 0.2)}
                 initial={"hidden"}
                 whileInView="show"
                 viewport={{ once: false, amount: 0 }}
+                className="hidden lg:block"
               >
-                <FaArrowRight className="text-6xl text-orange lg:block sm:hidden" />
+                <FaArrowRight className="text-6xl text-orange" />
               </motion.div>
-            ) : (
-              ""
-            )}
-          </>
+            ) : null}
+          </React.Fragment>
         );
       })}
     </div>
