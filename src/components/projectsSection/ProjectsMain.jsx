@@ -3,41 +3,46 @@ import ProjectsText from "./ProjectsText";
 import SingleProject from "./SingleProject";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
+import productCatalog from "../../../public/images/productCatalog.png";
+import webBlocks from "../../../public/images/webblocks.png";
+import codeEditor from "../../../public/images/codeEditor.png";
+import masteryCourses from "../../../public/images/masterycourses.png";
+import paySheet from "../../../public/images/paysheet.png";
 
 const projects = [
   {
     name: "Products Warehouse",
     year: "2025",
     align: "righ",
-    image: "./src/assets/images/productCatalog.png",
+    image: productCatalog,
     link: "https://mareklara.github.io/product-catalog/",
   },
   {
     name: "Web-Blocks",
     year: "2025",
     align: "left",
-    image: "./src/assets/images/webblocks.png",
+    image: webBlocks,
     link: "https://mareklara.github.io/Web-Blocks/",
   },
   {
     name: "Code Editor",
     year: "2025",
     align: "righ",
-    image: "./src/assets/images/codeeditor.png",
+    image: codeEditor,
     link: "https://mareklara.github.io/CodeEditor-Frontend/",
   },
   {
     name: "Mastery Courses",
     year: "2025",
     align: "left",
-    image: "./src/assets/images/masterycourses.png",
+    image: masteryCourses,
     link: "https://mareklara.github.io/MasteryPlan/",
   },
   {
     name: "PaySheet",
     year: "2025",
     align: "right",
-    image: "./src/assets/images/paysheet.png",
+    image: paySheet,
     link: "https://mareklara.github.io/ARS-PaySheet/",
   },
 ];

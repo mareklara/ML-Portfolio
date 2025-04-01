@@ -1,11 +1,12 @@
 import React from "react";
+import download from "../../../public/images/download.gif";
 
 const AboutMeImage = () => {
   return (
     <div className="h-[500px] w-[300px] relative">
       <div className="h-[500px] w-[300px] rounded-[50px] absolute overflow-hidden">
         <img
-          src="/images/download.gif"
+          src={download}
           alt="about img"
           className="h-full w-auto object-cover"
         />
