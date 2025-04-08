@@ -12,6 +12,13 @@ import pomodoro from "../../../public/images/pomodorofocus.png";
 
 const projects = [
   {
+    name: "Pomodoro Focus",
+    year: "2025",
+    align: "left",
+    image: pomodoro,
+    link: "https://mareklara.github.io/PomodoroFocus/",
+  },
+  {
     name: "Products Warehouse",
     year: "2025",
     align: "righ",
@@ -45,13 +52,6 @@ const projects = [
     align: "right",
     image: paySheet,
     link: "https://mareklara.github.io/ARS-PaySheet/",
-  },
-  {
-    name: "Pomodoro Focus",
-    year: "2025",
-    align: "left",
-    image: pomodoro,
-    link: "https://mareklara.github.io/PomodoroFocus/",
   },
 ];
 
