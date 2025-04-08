@@ -8,6 +8,7 @@ import webBlocks from "../../../public/images/webblocks.png";
 import codeEditor from "../../../public/images/codeEditor.png";
 import masteryCourses from "../../../public/images/masterycourses.png";
 import paySheet from "../../../public/images/paysheet.png";
+import pomodoro from "../../../public/images/pomodorofocus.png";
 
 const projects = [
   {
@@ -44,6 +45,13 @@ const projects = [
     align: "right",
     image: paySheet,
     link: "https://mareklara.github.io/ARS-PaySheet/",
+  },
+  {
+    name: "Pomodoro Focus",
+    year: "2025",
+    align: "left",
+    image: pomodoro,
+    link: "https://mareklara.github.io/PomodoroFocus/",
   },
 ];
 
