@@ -49,10 +49,10 @@ const NavbarMain = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // Prevent background scroll when menu is open
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "auto";
-  }, [menuOpen]);
+  // Optional: lock scroll when mobile menu is open
+  // useEffect(() => {
+  //   document.body.style.overflow = menuOpen ? "hidden" : "auto";
+  // }, [menuOpen]);
 
   return (
     <nav className="w-full fixed top-0 z-50 bg-black border-b border-orange">
@@ -65,10 +65,12 @@ const NavbarMain = () => {
           <NavbarLinks />
         </div>
 
-        {/* Call-to-Action Button */}
-        <NavbarBtn />
+        {/* Desktop Call-to-Action Button */}
+        <div className="hidden lg:block">
+          <NavbarBtn />
+        </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Hamburger Icon */}
         <div className="lg:hidden">
           <button
             className="text-2xl p-3 border border-orange rounded-full text-white cursor-pointer"
