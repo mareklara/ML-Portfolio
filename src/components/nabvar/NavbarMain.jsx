@@ -36,7 +36,7 @@
 
 //ner version
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import NavbarLogo from "./NavbarLogo";
 import NavbarLinks from "./NavbarLinks";
 import NavbarBtn from "./NavbarBtn";
@@ -45,36 +45,25 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const NavbarMain = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  // Optional: lock scroll when mobile menu is open
-  // useEffect(() => {
-  //   document.body.style.overflow = menuOpen ? "hidden" : "auto";
-  // }, [menuOpen]);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <nav className="w-full fixed top-0 z-50 bg-black border-b border-orange">
-      <div className="max-w-6xl mx-auto px-4 flex justify-between items-center py-4">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <NavbarLogo />
 
-        {/* Desktop Nav Links */}
-        <div className="hidden lg:block">
+        {/* Desktop Nav Links + Button */}
+        <div className="hidden lg:flex items-center gap-6">
           <NavbarLinks />
-        </div>
-
-        {/* Desktop Call-to-Action Button */}
-        <div className="hidden lg:block">
           <NavbarBtn />
         </div>
 
-        {/* Mobile Hamburger Icon */}
+        {/* Mobile Hamburger Button */}
         <div className="lg:hidden">
           <button
-            className="text-2xl p-3 border border-orange rounded-full text-white cursor-pointer"
             onClick={toggleMenu}
+            className="text-white text-3xl p-2 border border-orange rounded-full"
           >
             <GiHamburgerMenu />
           </button>
@@ -83,8 +72,11 @@ const NavbarMain = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="lg:hidden w-full bg-black border-t border-orange">
+        <div className="lg:hidden bg-black border-t border-orange px-4 py-6 space-y-6">
           <NavbarLinks />
+          <div className="flex justify-center">
+            <NavbarBtn />
+          </div>
         </div>
       )}
     </nav>
