@@ -42,20 +42,38 @@ const skills = [
 
 const AllSkills = () => {
   return (
+    // <div>
+    //   <div className="flex items-center justify-center relative gap-2 max-w-[1200px] mx-auto">
+    //     {skills.map((item, index) => {
+    //       return (
+    //         <motion.div
+    //           variants={fadeIn("up", `0.${index}`)}
+    //           initial={"hidden"}
+    //           whileInView="show"
+    //           viewport={{ once: false, amount: 0 }}
+    //         >
+    //           <SingleSkill key={index} text={item.skill} imgSvg={item.icons} />
+    //         </motion.div>
+    //       );
+    //     })}
+    //   </div>
+    // </div>
+
+    //updated
+
     <div>
-      <div className="flex items-center justify-center relative gap-2 max-w-[1200px] mx-auto">
-        {skills.map((item, index) => {
-          return (
-            <motion.div
-              variants={fadeIn("up", `0.${index}`)}
-              initial={"hidden"}
-              whileInView="show"
-              viewport={{ once: false, amount: 0 }}
-            >
-              <SingleSkill key={index} text={item.skill} imgSvg={item.icons} />
-            </motion.div>
-          );
-        })}
+      <div className="flex flex-wrap items-center justify-center gap-8 w-full">
+        {skills.map((item, index) => (
+          <motion.div
+            key={index}
+            variants={fadeIn("up", `0.${index}`)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0 }}
+          >
+            <SingleSkill text={item.skill} imgSvg={item.icons} />
+          </motion.div>
+        ))}
       </div>
     </div>
   );

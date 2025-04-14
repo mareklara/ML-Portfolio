@@ -49,7 +49,7 @@ const AllSkillsSM = () => {
             key={index}
             className="flex flex-col items-center"
           >
-            <IconComponent className="text-7xl text-orange" />
+            <IconComponent className="text-6xl sm:text-7xl text-orange" />
             <p className="text-center mt-4 text-white">{item.skill}</p>
           </motion.div>
         );
