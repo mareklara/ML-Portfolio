@@ -9,7 +9,7 @@ const links = [
   { link: "Contact", section: "contact" },
 ];
 
-const NavbarLinks = () => {
+const NavbarLinks = ({ onLinkClick }) => {
   return (
     // <ul className="flex cursor-pointer gap-6 text-white font-bold text-center lg:flex-row sm:flex-col lg:relative sm:absolute sm:top-[120%] left-[50%] -translate-x-[50%] lg:text-md sm:text-xl sm:bg-cyan/30 backdrop-blur-lg lg:bg-black sm:w-full py-4">
     <ul className="flex flex-col lg:flex-row gap-6 text-white font-bold text-center p-4">
@@ -22,6 +22,7 @@ const NavbarLinks = () => {
               spy={true}
               duration={500}
               offset={-130}
+              onClick={onLinkClick} // 👈 This closes the menu
               className="cursor-pointer text-white hover:text-cyan transition-all duration-500"
             >
               {link.link}

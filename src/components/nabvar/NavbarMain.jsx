@@ -73,7 +73,7 @@ const NavbarMain = () => {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="lg:hidden bg-black border-t border-orange px-4 py-6 space-y-6">
-          <NavbarLinks />
+          <NavbarLinks onLinkClick={() => setMenuOpen(false)} />
           <div className="flex justify-center">
             <NavbarBtn />
           </div>
